@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Calibri, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f8;
+    color: #162033;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* ---- Centered layout wrapper (Welcome, Login, Signup, VerifyOtp) ---- */
+.layout-centered {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* ---- Portal layout wrapper (QR, Attendance, Deduction) ---- */
+.layout-portal {
+    min-height: 100vh;
+    padding: 24px;
+}

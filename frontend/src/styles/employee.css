@@ -1,0 +1,395 @@
+/* ---------- Layout ---------- */
+.portal {
+    display: flex;
+    max-width: 980px;
+    min-height: 480px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(20, 30, 70, 0.12);
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    flex: 0 0 160px;
+    background: #fff;
+    padding: 22px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.logo-img {
+    display: block;
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+}
+
+.menu-link {
+    display: block;
+    padding: 9px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #162033;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu-link:hover {
+    background: #eff2fc;
+}
+
+.menu-link.active {
+    background: #2530c0;
+    color: #fff;
+}
+
+.user-box {
+    margin-top: auto;
+}
+
+.user-name {
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+.logout {
+    background: none;
+    border: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 11px;
+    color: #2530c0;
+    cursor: pointer;
+}
+
+.logout:hover {
+    text-decoration: underline;
+    background: none;
+}
+
+/* ---------- Content ---------- */
+.content {
+    flex: 1;
+    min-width: 0;
+    background: #eff2fc;
+    padding: 26px 28px;
+}
+
+.page-head {
+    margin-bottom: 18px;
+}
+
+.page-head h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.page-head p {
+    font-size: 12px;
+    color: #44506b;
+}
+
+.page-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.week-picker label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.week-picker select {
+    width: 180px;
+    height: 32px;
+    border: 1px solid #dde2ee;
+    border-radius: 4px;
+    background: #fff;
+    padding: 0 8px;
+    font-size: 11px;
+    color: #44506b;
+}
+
+/* ---------- Alert ---------- */
+.alert {
+    display: none;
+    background: #fce4e2;
+    border: 1px solid #efa9a5;
+    color: #8d1d18;
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 9px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.alert.show {
+    display: block;
+}
+
+/* ---------- Panels ---------- */
+.panel {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+
+.panel h2 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+/* ---------- QR code page ---------- */
+.grid-qr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.qr-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    margin: 0 auto 14px;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #44506b;
+    text-align: center;
+}
+
+.qr-name {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.qr-meta {
+    text-align: center;
+    font-size: 11px;
+    color: #44506b;
+    margin: 4px 0 14px;
+}
+
+.qr-note {
+    text-align: center;
+    font-size: 9.5px;
+    color: #66718c;
+}
+
+.side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.today-date {
+    font-size: 11px;
+    color: #66718c;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.time-box {
+    background: #eff2fc;
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+
+.time-box h3 {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: #44506b;
+    margin-bottom: 6px;
+}
+
+.time-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.steps {
+    list-style: none;
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 14px;
+    padding: 0;
+}
+
+.steps li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.steps li::before {
+    content: counter(step);
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #2530c0;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.steps strong {
+    display: block;
+    font-size: 12px;
+}
+
+.steps span {
+    font-size: 10.5px;
+    color: #66718c;
+}
+
+/* ---------- Stats ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.stat {
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px 16px;
+}
+
+.stat-label {
+    font-size: 10.5px;
+    color: #44506b;
+    margin-bottom: 6px;
+}
+
+.stat-value {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.stat-sub {
+    font-size: 9.5px;
+    color: #66718c;
+    margin-top: 4px;
+}
+
+.rate-note {
+    font-size: 10.5px;
+    color: #66718c;
+    margin-bottom: 14px;
+}
+
+/* ---------- Table ---------- */
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+.records {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.records th,
+.records td {
+    border: 1px solid #e3e7f1;
+    padding: 9px 10px;
+    text-align: left;
+}
+
+.records th {
+    font-weight: 700;
+    color: #44506b;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 9.5px;
+    font-weight: 700;
+}
+
+.badge-ok     { background: #e3f5e8; color: #1d5e33; }
+.badge-late   { background: #fff1cf; color: #8a5a00; }
+.badge-absent { background: #fce4e2; color: #8d1d18; }
+.badge-muted  { background: #e6e9ef; color: #55607a; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+    body {
+        padding: 12px;
+    }
+
+    .portal {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+        gap: 14px;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .user-box {
+        margin-top: 0;
+    }
+
+    .content {
+        padding: 20px 16px;
+    }
+
+    .grid-qr {
+        grid-template-columns: 1fr;
+    }
+}
