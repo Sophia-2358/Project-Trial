@@ -1,0 +1,4 @@
+/* 2.3.1 Wage computation — the Wage computation card. */
+
+.em-app .em-calc p { display: flex; justify-content: space-between; margin: 8px 0; }
+.em-app .em-calc .em-net { margin-top: 24px; font-size: 24px; font-weight: bold; }

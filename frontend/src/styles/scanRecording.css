@@ -1,0 +1,14 @@
+/* 2.1.1 QR scan time in and time out — Scan attendance page.
+   Needs employeeManagement.css (loaded by OwnerLayout) first. */
+
+.em-app .em-card-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.em-app .em-card-head h2 { margin: 0; }
+.em-app .em-toggle { display: flex; border: 1px solid #9aa8b5; border-radius: 8px; overflow: hidden; }
+.em-app .em-toggle button { padding: 8px 18px; border-radius: 0; background: #fff; color: #3d4b5a; }
+.em-app .em-toggle button.em-active { background: #2631c4; color: #fff; }
+.em-app #qr-reader { width: 100%; border: 1px solid #d9dee8 !important; border-radius: 12px; overflow: hidden; }
+.em-app .em-who { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.em-app .em-who .em-name { font-size: 20px; font-weight: bold; }
+.em-app .em-check { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: #d5eedd; color: #1c6b3a; font-size: 28px; }
+.em-app .em-event { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 0; border-bottom: 1px solid #e1e5ec; }
+.em-app .em-pill.em-grey { background: #e3e7ec; color: #3d4b5a; }

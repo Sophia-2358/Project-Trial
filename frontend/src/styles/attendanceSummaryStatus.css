@@ -1,0 +1,5 @@
+/* 2.2.2 Attendance summary and status — summary cards. */
+
+.em-app .em-stats { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
+.em-app .em-stats .em-card { flex: 1; min-width: 160px; margin: 0; }
+.em-app .em-stats .em-num { margin: 4px 0; font-size: 34px; font-weight: bold; }

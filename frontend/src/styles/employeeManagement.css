@@ -1,0 +1,72 @@
+/* =====================================================================
+   employeeManagement.css
+   Shared styles for the Owner side (layout, sidebar, cards, forms, buttons,
+   messages, tables, pills). Every rule is scoped under .em-app and every class
+   is prefixed em- so nothing here can clash with employee.css or index.css.
+
+   Styles that belong to one breakdown are in their own file:
+     scanRecording.css            2.1.1  Scan attendance page
+     attendanceSummaryStatus.css  2.2.2  Summary cards
+     wageComputation.css          2.3.1  Wage computation card
+     payrollValidationSaving.css  2.3.2  Save payroll record button
+   ===================================================================== */
+
+.em-app * { box-sizing: border-box; }
+.em-app { margin: 0; display: flex; min-height: 100vh; font-family: Calibri, Arial, sans-serif; color: #17222d; background: #eff2fb; }
+
+/* Sidebar */
+.em-app .em-sidebar { width: 250px; padding: 24px 20px; display: flex; flex-direction: column; background: #fff; border-right: 1px solid #d9dee8; }
+.em-app .em-logo { display: block; width: 100%; max-width: 210px; margin: 0 auto 32px; }
+.em-app .em-sidebar a { display: block; margin-bottom: 4px; padding: 12px 16px; border-radius: 8px; color: #3d4b5a; text-decoration: none; }
+.em-app .em-sidebar a.em-active { background: #2631c4; color: #fff; font-weight: bold; }
+.em-app .em-sidebar .em-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid #d9dee8; }
+.em-app .em-sidebar .em-bottom a { padding: 8px 16px; }
+
+/* Page */
+.em-app main { flex: 1; max-width: 1200px; padding: 32px 40px; }
+.em-app .em-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.em-app h1 { margin: 0 0 4px; font-size: 34px; }
+.em-app .em-sub { margin: 0 0 24px; color: #5a6b7a; }
+.em-app .em-card { margin-bottom: 20px; padding: 20px; background: #fff; border: 1px solid #d9dee8; border-radius: 12px; }
+.em-app .em-card h2 { margin: 0 0 8px; font-size: 20px; }
+.em-app .em-row { display: flex; flex-wrap: wrap; gap: 16px; }
+.em-app .em-row > * { flex: 1; min-width: 160px; }
+
+/* Forms and buttons */
+.em-app label { display: block; margin: 12px 0 4px; font-size: 14px; font-weight: bold; }
+.em-app input, .em-app select { width: 100%; padding: 10px 12px; border: 1px solid #9aa8b5; border-radius: 6px; font-size: 15px; }
+.em-app button, .em-app .em-btn { display: inline-block; padding: 11px 18px; border: 0; border-radius: 6px; background: #2631c4; color: #fff; font-size: 15px; font-weight: bold; text-decoration: none; cursor: pointer; }
+.em-app .em-btn.em-light, .em-app button.em-light { background: #fff; color: #2631c4; border: 1px solid #2631c4; }
+.em-app :focus-visible { outline: 3px solid #8e97f0; outline-offset: 2px; }
+
+/* Messages */
+.em-app .em-msg { display: none; margin: 12px 0; padding: 10px 14px; border-radius: 6px; }
+.em-app .em-msg.em-error { display: block; background: #fde2e0; color: #9b1c1c; border: 1px solid #e0554d; }
+.em-app .em-msg.em-ok { display: block; background: #d5eedd; color: #1c6b3a; border: 1px solid #7cc596; }
+
+/* Tables and labels */
+.em-app table { width: 100%; border-collapse: collapse; }
+.em-app th, .em-app td { padding: 12px; text-align: left; border: 1px solid #e1e5ec; }
+.em-app th { color: #5a6b7a; font-size: 14px; }
+.em-app .em-pill { display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 13px; font-weight: bold; }
+.em-app .em-pill.em-green { background: #d5eedd; color: #1c6b3a; }
+.em-app .em-pill.em-amber { background: #fbe9c6; color: #7a4b00; }
+.em-app .em-pill.em-red { background: #fde2e0; color: #9b1c1c; }
+
+.em-app .em-muted { color: #5a6b7a; font-size: 14px; }
+
+@media (max-width: 800px) {
+  .em-app { flex-direction: column; }
+  .em-app .em-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 12px; }
+  .em-app .em-logo, .em-app .em-sidebar .em-bottom { display: none; }
+  .em-app main { padding: 20px; }
+}
+@media print {
+  .em-app .em-sidebar, .em-app .em-no-print { display: none; }
+  .em-app { background: #fff; }
+}
+
+/* Sidebar log out button (looks like the other sidebar links) */
+.em-app .em-sidebar .em-linkbtn { display: block; width: 100%; margin-bottom: 4px; padding: 8px 16px; border-radius: 8px; background: transparent; color: #3d4b5a; font-size: inherit; font-weight: normal; text-align: left; }
+.em-app .em-sidebar .em-linkbtn:hover, .em-app .em-sidebar a:hover { background: #eff2fb; }
+.em-app .em-sidebar a.em-active:hover { background: #2631c4; }
